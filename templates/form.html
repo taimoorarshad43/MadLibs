@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block title %}Input Words{% endblock %}
+
+{%block header %}Add Your Words!{% endblock %}
+
+{% block content %}
+<form action="/story">
+    {% for template in templates %}
+    <div>
+        <label for={{template}}>{{template}}</label>
+        <input type="text" name={{template}}>
+    </div>
+    {% endfor %}
+    <button>Submit</button>
+</form>
+{% endblock %}
